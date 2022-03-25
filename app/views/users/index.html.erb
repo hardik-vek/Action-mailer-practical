@@ -1,0 +1,20 @@
+<h1 class='center'>User's Listing</h1>
+<center>
+  <table>
+    <th>Name</th>
+    <th>Email</th>
+    <th colspan='3'>Actions</th>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= button_to 'Show', user_path(user), method: :get %></td>
+        <td><%= button_to 'Edit', edit_user_path(user), method: :get %></td>
+        <td><%= button_to 'Delete', user_path(user), method: :delete %></td>
+      <% end %>
+    </tr>
+  </table>
+</center>
+<p class='center'>
+  <%= link_to "new user",new_user_path %>
+</p>

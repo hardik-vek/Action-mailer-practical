@@ -1,0 +1,14 @@
+<div class="center">
+  Name: <strong><%= @user.name %></strong></br>
+</div>
+<div class="center">
+  Email: <strong><%= @user.email %></strong></br>
+</div>
+<div class="center">
+  Picture: <%= image_tag(@user.picture.url(:thumb)) %></br>
+</div>
+<div class="center">
+  <%= link_to 'Back', users_path  %>
+  <%= link_to 'Edit', edit_user_path(@user)  %>
+  <%= link_to 'Delete', user_path(@user), data: {turbo_method: :delete,turbo_confirm: "Are you sure?"} %>
+</div>

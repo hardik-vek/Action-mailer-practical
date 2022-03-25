@@ -1,0 +1,17 @@
+<%= form_with model: @user do |f| %>
+  <div class="center">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="center">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+  <div class="center">
+    <%= f.label :picture %>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="center">
+    <%= f.submit %>
+  </div>
+<% end %>
